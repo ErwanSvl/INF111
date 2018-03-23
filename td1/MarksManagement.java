@@ -16,7 +16,7 @@ public class MarksManagement {
     public static void inputMarks(Mark[] marks) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Saisie de toutes les notes : ");
-        for (int i = 0; i < marks.length ; i++) {
+        for (int i = 0; i < marks.length; i++) {
             System.out.println("Nom de l'étudiant?");
             String name = scan.next();
             System.out.println("Note de l'étudiant?");
@@ -27,7 +27,7 @@ public class MarksManagement {
 
     public static void printMarks(Mark[] marks) {
         for (int i = 0; i < marks.length; i++) {
-            System.out.println("Nom : " + marks[i].getName() + " note : " + marks[i].getMark());   
+            System.out.println("Nom : " + marks[i].getName() + " note : " + marks[i].getMark());
         }
     }
 
@@ -36,13 +36,13 @@ public class MarksManagement {
         for (int i = 0; i < marks.length; i++) {
             sum += marks[i].getMark();
         }
-        return (float)sum/marks.length;
+        return (float) sum / marks.length;
     }
 
     public static int bestMark(Mark[] marks) {
         int bestMark = 0;
         for (int i = 0; i < marks.length; i++) {
-            if(marks[i].getMark() > bestMark) {
+            if (marks[i].getMark() > bestMark) {
                 bestMark = marks[i].getMark();
             }
         }
